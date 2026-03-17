@@ -1,2 +1,2 @@
-# -
+classDiagram class Person { <<abstract>> - string Name + Person(string name) + Display()* } class Student { - string StudentID - List~Subject~ subjects + Student(string name, string id) + AddSubject(Subject subject) + GetSubjects() List~Subject~ + Display() } class Subject { - string SubjectName - string SubjectID - double Score + Subject(string name, string id, double score) + GetGrade() string + Display() } class Program { - List~Student~ students + Main() + AddStudent() + AddSubject() + ShowData() + FindStudent() Student } Person <|-- Student Student "1" --> "*" Subject Program --> Student
 นาย ปพนธีร์ บั้งทอง 683450055-1
